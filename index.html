@@ -13,27 +13,30 @@
 </head>
 <body>
 
-    <div class="container-fluid">
-            <div class="jumbotron text-left">
-                <h1>Seinfeldist</h1>
-            </div>
-		</div>
+    <div class="container">
+            <div class="jumbotron">
+				<h1>Seinfeldist</h1>
+				<br>
+				<h2>The Rules</h2>
+				<p>There are five questions, you have 50 seconds to answer all questions.</p>
 
-	<div id="timer"></div>
+			</div>
 
-	<div id="quiz">
-
-			<h2 class="rules">The Rules</h2>
-			<p class="rules">There are five questions, you have 50 seconds to answer all questions.</p>
-			<button id="start-button">Start</button>
+			<div id="quiz">
+			<div id="timer"></div>
+			<br>
+			<p>Click Start to begin!</p>
+			<button id="button" name="start-button">Start</button>
+			<br>
 
 			<p class="question">1. What is the show about?</p>
 			<ul class="answers">
-			<input type="radio" name="q1" value="a" id="q1a"><label for="q1a"> George Costanza and his polyamorous relationship shenanigans</label><br/>
-			<input type="radio" name="q1" value="b" id="q1b"><label for="q1b"> Nothing</label><br/>
-			<input type="radio" name="q1" value="c" id="q1c"><label for="q1c"> Everything</label><br/>
-			<input type="radio" name="q1" value="d" id="q1d"><label for="q1d"> There is only Newman</label><br/>
+			<input type="radio" name="q1" value="a" id="q1a"> George Costanza and his polyamorous relationship shenanigans<br/>
+			<input type="radio" name="q1" value="b" id="q1b"> Nothing<br/>
+			<input type="radio" name="q1" value="c" id="q1c"> Everything<br/>
+			<input type="radio" name="q1" value="d" id="q1d"> There is only Newman<br/>
 			</ul>
+			<br>
 
 			<p class="question">2. What is the perfect show to watch after this one?</p>
 			<ul class="answers">
@@ -42,6 +45,7 @@
 			<input type="radio" name="q2" value="c" id="q2c"><label for="q2c"> Law and Order: any</label><br/>
 			<input type="radio" name="q2" value="d" id="q2d"><label for="q2d"> All of the above</label><br/>
 			</ul>
+			<br>
 
 			<p class="question">3. Where does Jerry live?</p>
 			<ul class="answers">
@@ -50,6 +54,7 @@
 			<input type="radio" name="q3" value="c" id="q3c"><label for="q3c"> Manhattan</label><br/>
 			<input type="radio" name="q3" value="d" id="q3d"><label for="q3d"> Shaolin (Staten Island)</label><br/>
 			</ul>
+			<br>
 
 			<p class="question">4. Uncle who?</p>
 			<ul class="answers">
@@ -58,6 +63,7 @@
 			<input type="radio" name="q4" value="c" id="q4c"><label for="q4c"> Geo</label><br/>
 			<input type="radio" name="q4" value="d" id="q4d"><label for="q4d"> Vito</label><br/>
 			</ul>
+			<br>
 
 			<p class="question">5. What movie did Jerry make-out through?</p>
 			<ul class="answers">
@@ -66,6 +72,7 @@
 			<input type="radio" name="q5" value="c" id="q5c"><label for="q5c"> Forest Gump</label><br/>
 			<input type="radio" name="q5" value="d" id="q5d"><label for="q5d"> Titanic</label><br/>
 			</ul>
+			<br>
 		</div>
 
 		<div id="submit">
