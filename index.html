@@ -7,29 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Seinfeld Trivia</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	<link rel="stylesheet" href="https://bootswatch.com/3/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 <body>
+
     <div class="container-fluid">
             <div class="jumbotron text-left">
-
                 <h1>Seinfeldist</h1>
             </div>
-        </div>
 		</div>
-	<div id="main-container" class="container">
-		<section class="main-section">
+
+	<div id="timer"></div>
+
+	<div id="quiz">
+
 			<h2 class="rules">The Rules</h2>
-			<p class="rules">There are 5 questions, you have 50 seconds to answer all 5 questions.</p>
-			<h2>
-				<button type="button" id="start-button">Start</button>
-			</h2>
-			<!-- timer will be displayed in div#show-number-->
-			<div id="show-number"></div>
-			<!-- question 1 -->
+			<p class="rules">There are five questions, you have 50 seconds to answer all questions.</p>
+			<button id="start-button">Start</button>
+
 			<p class="question">1. What is the show about?</p>
 			<ul class="answers">
 			<input type="radio" name="q1" value="a" id="q1a"><label for="q1a"> George Costanza and his polyamorous relationship shenanigans</label><br/>
@@ -37,7 +34,7 @@
 			<input type="radio" name="q1" value="c" id="q1c"><label for="q1c"> Everything</label><br/>
 			<input type="radio" name="q1" value="d" id="q1d"><label for="q1d"> There is only Newman</label><br/>
 			</ul>
-			<!-- question 2 -->
+
 			<p class="question">2. What is the perfect show to watch after this one?</p>
 			<ul class="answers">
 			<input type="radio" name="q2" value="a" id="q2a"><label for="q2a"> The X-Files</label><br/>
@@ -45,7 +42,7 @@
 			<input type="radio" name="q2" value="c" id="q2c"><label for="q2c"> Law and Order: any</label><br/>
 			<input type="radio" name="q2" value="d" id="q2d"><label for="q2d"> All of the above</label><br/>
 			</ul>
-			<!-- question 3 -->
+
 			<p class="question">3. Where does Jerry live?</p>
 			<ul class="answers">
 			<input type="radio" name="q3" value="a" id="q3a"><label for="q3a"> Queens</label><br/>
@@ -53,7 +50,7 @@
 			<input type="radio" name="q3" value="c" id="q3c"><label for="q3c"> Manhattan</label><br/>
 			<input type="radio" name="q3" value="d" id="q3d"><label for="q3d"> Shaolin (Staten Island)</label><br/>
 			</ul>
-			<!-- question 4 -->
+
 			<p class="question">4. Uncle who?</p>
 			<ul class="answers">
 			<input type="radio" name="q4" value="a" id="q4a"><label for="q4a"> Leo</label><br/>
@@ -61,7 +58,7 @@
 			<input type="radio" name="q4" value="c" id="q4c"><label for="q4c"> Geo</label><br/>
 			<input type="radio" name="q4" value="d" id="q4d"><label for="q4d"> Vito</label><br/>
 			</ul>
-			<!-- question 5 -->
+
 			<p class="question">5. What movie did Jerry make-out through?</p>
 			<ul class="answers">
 			<input type="radio" name="q5" value="a" id="q5a"><label for="q5a"> The Lion King</label><br/>
@@ -69,26 +66,30 @@
 			<input type="radio" name="q5" value="c" id="q5c"><label for="q5c"> Forest Gump</label><br/>
 			<input type="radio" name="q5" value="d" id="q5d"><label for="q5d"> Titanic</label><br/>
 			</ul>
-			<!-- Hidden Buttons and Elements -->
-			<!-- Submit Button -->
-			<button type="button" id="submit">Submit Final Answers</button>
-			<!-- Results -->
-			<div id="results">
+		</div>
+
+		<div id="submit">
+			<button id="submit-btn">Submit Final Answers</button>
+		</div>
+
+		<div id="results">
 			Answers NOW!
-			</div>
-			<button type="button" id="restart">Play Again</button>
-		</section>
-	</div>
+		</div>
+
+		<div id="restart">
+			<button id="restart-btn">Play Again</button>
+		</div>
+
 	<footer id="footer" class="site-footer">
 		<div class="container">
-			&copy; Copyright 2018 Patricia Joanna Borowiec
+			&copy; 2018 PJB and coding bootcamp
 		</div>
 	</footer>
 
 	<!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-    <!-- JavaScript File & jQuery Lib -->
+    <!-- JavaScript -->
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
