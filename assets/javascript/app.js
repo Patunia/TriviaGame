@@ -1,9 +1,17 @@
-var timer = 50;
-var interval = setInterval(function(){
-  document.getElementById('timer').innerHTML=count;
-  timer--;
-  if (timer === 0){
-    clearInterval(interval);
-    document.getElementById('timer').innerHTML='Done';
+function startTimer(){
+    var timer = 50;
+    setInterval(function() {
+        timer--;
+      if (timer >= 0) {
+        span = document.getElementById("count");
+        span.innerHTML = timer;
+      }
+      if (timer === 0) {
+          alert('time is up!');
+          clearInterval(timer);
+      }
+    }, 1000);
   }
-}, 1000);
+  $("#startClock").click(function(){
+      startTimer();
+   });
