@@ -14,16 +14,18 @@ $(document).ready(function(){
         }, 1000);
     }
 
-    function finish(){
-        number = 1;
-        clearInterval(timer);
-    }
+    for (var i = 0; i < questions.length; i++) {
+        panel.append("<h2>" + questions[i].question + "</h2>");
+        for (var j = 0; j < questions[i].answers.length; j++) {
+          panel.append("<input type='radio' name='question-" + i +
+          "' value='" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
+        }
+      }
 
-    function restart(){
-        number = 50;
-        start();
-    }
+      panel.append("<button id='done'>Done</button>");
+    },
 
+     function done() {
       $.each($("input[id='q1b']:checked"), function() {
         if ($(this).val() === q1b) {
           game.correct++;
@@ -73,16 +75,25 @@ $(document).ready(function(){
 
     },
 
-    result: function() {
+    function result() {
         clearInterval(timer);
         $("#sresults h2").remove();
-      panel.html("<h2>All Done!</h2>");
-      panel.append("<h3>Correct Answers: " + this.correct + "</h3>");
-      panel.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
-      panel.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
+        panel.html("<h2>All Done!</h2>");
+        panel.append("<h3>Correct Answers: " + this.correct + "</h3>");
+        panel.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
+        panel.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
     }
 
-  };
+    function finish(){
+        number = 1;
+        clearInterval(timer);
+        }
+
+    function restart(){
+        number = 50;
+        start();
+        }
+    };
 
     $("#startClock").on("click", startTimer);
     $("#restart").on("click", restart);
