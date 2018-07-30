@@ -26,6 +26,10 @@ body {
     padding-left: 10px;
 }
 
+.row {
+    padding:10px;
+}
+
 h1 {
     font-size: 40px;
     font-weight: bold;
@@ -34,4 +38,9 @@ h1 {
 h2,p {
     font-weight: 500;
     color: ghostwhite;
+    padding: 3px;
+}
+
+button{
+    padding: 5px;
 }
