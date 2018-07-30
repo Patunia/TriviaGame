@@ -1,9 +1,9 @@
-// // simple timer set to 50 seconds
-// setTime(timeUp, 1000 * 50);
-
-// //console.log time up
-// function timeUp() {
-//     console.log("done");
-//     $("#time-left").append("<p>Your time is up!</p>");
-//     console.log(" the time is up");
-// }
+var timer = 50;
+var interval = setInterval(function(){
+  document.getElementById('count').innerHTML=count;
+  count--;
+  if (count === 0){
+    clearInterval(interval);
+    document.getElementById('count').innerHTML='Done';
+  }
+}, 1000);
