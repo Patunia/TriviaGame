@@ -14,22 +14,78 @@ $(document).ready(function(){
         }, 1000);
     }
 
-    $("#startClock").click(function(){
-        startTimer();
-    });
-
     function finish(){
         number = 1;
         clearInterval(timer);
     }
-
-    $("#submit").on("click", finish);
 
     function restart(){
         number = 50;
         start();
     }
 
+      $.each($("input[id='q1b']:checked"), function() {
+        if ($(this).val() === q1b) {
+          game.correct++;
+        }
+        else {
+          game.incorrect++;
+        }
+      });
+
+      $.each($("input[id='q2d']:checked"), function() {
+        if ($(this).val() === q2d) {
+          game.correct++;
+        }
+        else {
+          game.incorrect++;
+        }
+      });
+
+      $.each($("input[id='q3c']:checked"), function() {
+        if ($(this).val() === q3c) {
+          game.correct++;
+        }
+        else {
+          game.incorrect++;
+        }
+      });
+
+      $.each($("input[id='q4a']:checked"), function() {
+        if ($(this).val() === q4a) {
+          game.correct++;
+        }
+        else {
+          game.incorrect++;
+        }
+      });
+
+      $.each($("input[id='q5b']:checked"), function() {
+        if ($(this).val() === q5b) {
+          game.correct++;
+        }
+        else {
+          game.incorrect++;
+        }
+      });
+
+      this.result();
+
+    },
+
+    result: function() {
+        clearInterval(timer);
+        $("#sresults h2").remove();
+      panel.html("<h2>All Done!</h2>");
+      panel.append("<h3>Correct Answers: " + this.correct + "</h3>");
+      panel.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
+      panel.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
+    }
+
+  };
+
+    $("#startClock").on("click", startTimer);
     $("#restart").on("click", restart);
+    $("#submit").on("click", finish);
 
 });
